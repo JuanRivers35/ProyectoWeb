@@ -12,6 +12,7 @@ function App() {
         <Button>Guardar</Button>
         <p>
           Edit <code>src/App.js</code> and save to reload.
+          wato
         </p>
         <a
           className="App-link"
@@ -21,6 +22,7 @@ function App() {
         >
           Learn React
         </a>
+        <Button variant = "primary" > wato </Button> {''}
       </header>
     </div>
   );
