@@ -1,0 +1,23 @@
+*{
+    background-color: #1b1b32;
+    color: #f5f6f7;
+    font-size: 20px;
+    font-family: Tahoma;
+    justify-content:center;
+    margin: 0;
+    background-color: #1b1b32;
+    color: #f5f6f7;
+    font-size: 20px;
+    font-family: Tahoma;
+    justify-content:center;
+}
+
+.estilo.card{
+
+.boton:hover {
+    background-color: #0057a0;
+}
+.Grid{
+    padding: 20px;
+}   
+}
