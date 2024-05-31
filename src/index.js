@@ -1,24 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { useEffect, useState } from 'react';
+import FormUser from './FormularioUsuario';
+import TableUser from './Usuarios';
+import { useDispatch } from 'react-redux';
 
-import store from '../src/redux/store/store';
-import { Provider } from 'react-redux';
+function Usuarios() {
+    const dispatch = useDispatch();
+    const [showForm, setShowForm] = useState(false);
+    const [idUserEdit, setUserEdit] = useState(0);
 
+    const showTable = () => {
+        setShowForm(prevShowForm => !prevShowForm); // Utilizando el estado anterior
+        if(showForm){
+            setUserEdit(idUserEdit);
+        }
+    };
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <Provider store={store}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Provider>
+    useEffect(() => {
+        
+    }, [dispatch, idUserEdit]);
 
-);
+    return (
+        showForm ? (
+            <FormUser showForm={showTable} id={idUserEdit}/>
+        ) : (
+            <TableUser showForm={showTable} idUserEdit={id => setUserEdit(id)}/>
+        )
+    );
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+export default Usuarios;
