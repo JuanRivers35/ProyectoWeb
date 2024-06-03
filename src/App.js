@@ -1,5 +1,5 @@
 //import { useState } from 'react';
-import logo from './logo.svg';
+import logo from './snowflake.jpg';
 import './App.css';
 // import PrimerFormulario from './componentes/PrimerFormulario';
 
